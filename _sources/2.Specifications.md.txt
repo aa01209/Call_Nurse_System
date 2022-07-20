@@ -1,0 +1,89 @@
+# 2. Specifications
+
+The call nurse system is taken from a daily routine in the hospital
+and the image below displays that 
+
+![Call Nurse System illustration](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Call%20Nurse%20System.png)
+<p align="center"> Fig.2.2: Fig.2.1 One-way Communication of Call Nurse System </p>
+
+### Real life scenario
+
+Basically, if the patient in the Hospital needs aid, he/she will push the button 
+mounted near the bed. As a result, the nurses’ reception area will get an alert 
+that patient asking for help.
+ 
+But, to describe this process in the Hardware Description Language (HDL)
+and implemented on the Field Programmable Gate Array (FPGA) board. 
+## Functionality  
+
+I will explain the Functionality of the project in two case scenarios
+
+### Case 1 
+
+If one patient pushes on the help **push-button-switch**
+
+- The patient room **green LED** start blinking.
+- The Nurse’s Reception area is alarmed by the **Active Buzzer** which rings and the **red LED** starts to blink continuously.
+- The **Seven Segment Display1** will show the patient bed number.
+- If the nurse pushes the **reset button**, the bed number on **Seven Segment Display1** 
+should vanish and the counter should count 1(number of times nurse is called) and 
+display that on **seven segments Display2**, but the patient room **green LED** should keep
+blinking continuously unless the nurse enters the patient room and **resets** it.
+- The **Active Buzzer** will stop only when the nurse pushes **reset button**.
+
+### Case 2 
+
+If two patients or more push on the help **push-button-switch** at the same time. 
+- The patient room **green LED** start blinking.
+- the **Active buzzer** in the reception should turn on.
+- the **red LED** in the reception should continuously blink.
+- the **Seven Segments Display1** shows the patient beds number one after other
+
+- if the 1st nurse pushes on the **reset button**, the 1st bed number on **Seven Segments Display1**
+should vanish and the counter should count 1 and display that on **seven segments Display2**,
+but the patient room **green LED** should be blinking continuously unless the nurse 
+enters the patient room and **resets** it.
+
+- The 2nd room number should be visible on the **seven segments Display1** and the reception
+**red LED** keeps glowing until the second nurse comes 
+- If the 2nd nurse pushes the **button** in the reception, the orders should be clear onto 
+the **Seven Segment Display1**, and the counter should count and shows 2 on the
+**seven segments Display2** but the patient room **green LED** should be blinking continuously
+unless the nurse enters the patient room and **resets** it. 
+- The **Active Buzzer** will stop only when the nurse pushes **reset button**.
+
+After understanding the functionality of the one-way communication of 
+Call Nurse system, now what are the inputs and the outputs on the FPGA
+Boolean board and how to connect the Active Buzzer with board? 
+
+## Components
+
+The following image illustrates the inputs, output and the connection of
+the Active Buzzer on the Boolean Board
+
+![Boolean Board ](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Specification%20Boolean%20Board2.png "Logo Title Text 1")
+<p align="center"> Fig.2.2 Boolean board inputs and outputs that are used in the project </p>  
+
+
+The Call Nurse system consists of 2 major hardware components which are:
+
+- FPGA board: Xilinx Spartan-7 XC7S50-CSGA324, and it was provided by 
+  [Deggendorf Institute of Technology](https://www.th-deg.de/) from [Realdigital website](https://www.realdigital.org/hardware/boolean).  
+- Active Piezo Buzzer which also was provided by [Deggendorf Institute of Technology](https://www.th-deg.de/) from [Sensorkit website](https://sensorkit.joy-it.net/de/)        
+
+In the Image above the inputs and the output representation is 
+
+### Input 
+- Selectors (Switches) &rarr; patient ask for help 
+- Push button  &rarr; to reset the seven-segment display one and turn off the buzzer 
+- Clock  &rarr; Main clock of the Boolean board(100MHz)
+
+### Output 
+-	Seven segment disply1 &rarr; Bed Number on Seven Segment Display one  
+-	Seven segment disply2 &rarr; Number of orders on Seven Segment Display two 
+-	RGB0 &rarr;  only red LED is used to alarm the reception 
+-	Led (0-15) &rarr;Green LED for patient room 
+-	PMODC pins &rarr; Active Buzzer to alarm the reception  
+
+
+

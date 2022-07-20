@@ -1,0 +1,23 @@
+# 1. Literature research
+
+This FPGA project is aimed to show how the communication is established between 
+the patients and nurse’s reception area in a hospital. This project gives an
+indication with patient bed number, buzzer and blinking LED for alarming the 
+nurse's reception area that the patient needs help. 
+
+The idea of this project comes from my previous work experience as technical trainer,
+I installed this device in office building which was used to communicate between the 
+service office and other offices, for example if the manager is calling then his office
+number will be shown on the display. Based on that, each number indicates a specific call
+of help as shown below ↓.
+
+
+- Number one   &rarr; Manager Office   
+- Number two   &rarr; Manager Assistant Office
+- Number three &rarr; Chief Executive Office
+- Number four  &rarr; Chief Operating Office 
+- Number five  &rarr; Chief Financial Office 
+- Number six   &rarr; Chief Information Office 
+- Number seven &rarr; Chief Technology Office
+
+you can see the Call Bell system [here ](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/blob/main/Images/Call%20bell%20system.png)

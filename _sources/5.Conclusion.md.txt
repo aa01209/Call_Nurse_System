@@ -1,0 +1,19 @@
+# 5. Conclusion
+
+This project is aimed to connect the specific component of the FPGA Boolean board and 
+Active buzzer using the HDL Verilog. Where in Verilog is used to describe the behaviour
+and the functionality of Call Nurse System circuit in top module which contains the
+other sub-modules required to complete the design and will get converted into digital 
+circuit during synthesis. 
+ 
+During the implementation of this project, I have learned about circuit design for
+debouncing circuit as well as seven segment displays. 
+
+The most challenges that I faced were related to converting the concept into Verilog 
+code so I have solved that by verification through simulation and timing analysis.
+
+Another challenge that I faced was when I was writing the testbench code for the 
+entire top module which required more simulation time without providing the proper 
+data required. To solve this issue, I have made testbench for each sub module.
+
+

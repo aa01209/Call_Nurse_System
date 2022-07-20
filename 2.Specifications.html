@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Specifications &#8212; Call Nurse System  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <link rel="shortcut icon" href="_static/apple_notes_icon_public_domain_via_wikimedia_commons.svg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Implementation" href="3.Implementation.html" />
+    <link rel="prev" title="1. Literature research" href="1.Literature%20research.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/apple_notes_icon_public_domain_via_wikimedia_commons.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Call Nurse System  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Literature%20research.html">
+   1. Literature research
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Specifications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Implementation.html">
+   3. Implementation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Improvement.html">
+   4. Improvement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Conclusion.html">
+   5. Conclusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Source%20code.html">
+   6.Source Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch4-results.html">
+   Results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown_examples.html">
+   Markdown examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spellcheck.html">
+   Spellcheck
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="editing_video.html">
+   Editing and embedding a video
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/2.Specifications.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#real-life-scenario">
+   Real life scenario
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functionality">
+   Functionality
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-1">
+     Case 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-2">
+     Case 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components">
+   Components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2. Specifications</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#real-life-scenario">
+   Real life scenario
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functionality">
+   Functionality
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-1">
+     Case 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#case-2">
+     Case 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components">
+   Components
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="specifications">
+<h1>2. Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">#</a></h1>
+<p>The call nurse system is taken from a daily routine in the hospital
+and the image below displays that</p>
+<p><img alt="Call Nurse System illustration" src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Call%20Nurse%20System.png" /></p>
+<p align="center"> Fig.2.2: Fig.2.1 One-way Communication of Call Nurse System </p>
+<section id="real-life-scenario">
+<h2>Real life scenario<a class="headerlink" href="#real-life-scenario" title="Permalink to this headline">#</a></h2>
+<p>Basically, if the patient in the Hospital needs aid, he/she will push the button
+mounted near the bed. As a result, the nurses’ reception area will get an alert
+that patient asking for help.</p>
+<p>But, to describe this process in the Hardware Description Language (HDL)
+and implemented on the Field Programmable Gate Array (FPGA) board.</p>
+</section>
+<section id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Permalink to this headline">#</a></h2>
+<p>I will explain the Functionality of the project in two case scenarios</p>
+<section id="case-1">
+<h3>Case 1<a class="headerlink" href="#case-1" title="Permalink to this headline">#</a></h3>
+<p>If one patient pushes on the help <strong>push-button-switch</strong></p>
+<ul class="simple">
+<li><p>The patient room <strong>green LED</strong> start blinking.</p></li>
+<li><p>The Nurse’s Reception area is alarmed by the <strong>Active Buzzer</strong> which rings and the <strong>red LED</strong> starts to blink continuously.</p></li>
+<li><p>The <strong>Seven Segment Display1</strong> will show the patient bed number.</p></li>
+<li><p>If the nurse pushes the <strong>reset button</strong>, the bed number on <strong>Seven Segment Display1</strong>
+should vanish and the counter should count 1(number of times nurse is called) and
+display that on <strong>seven segments Display2</strong>, but the patient room <strong>green LED</strong> should keep
+blinking continuously unless the nurse enters the patient room and <strong>resets</strong> it.</p></li>
+<li><p>The <strong>Active Buzzer</strong> will stop only when the nurse pushes <strong>reset button</strong>.</p></li>
+</ul>
+</section>
+<section id="case-2">
+<h3>Case 2<a class="headerlink" href="#case-2" title="Permalink to this headline">#</a></h3>
+<p>If two patients or more push on the help <strong>push-button-switch</strong> at the same time.</p>
+<ul class="simple">
+<li><p>The patient room <strong>green LED</strong> start blinking.</p></li>
+<li><p>the <strong>Active buzzer</strong> in the reception should turn on.</p></li>
+<li><p>the <strong>red LED</strong> in the reception should continuously blink.</p></li>
+<li><p>the <strong>Seven Segments Display1</strong> shows the patient beds number one after other</p></li>
+<li><p>if the 1st nurse pushes on the <strong>reset button</strong>, the 1st bed number on <strong>Seven Segments Display1</strong>
+should vanish and the counter should count 1 and display that on <strong>seven segments Display2</strong>,
+but the patient room <strong>green LED</strong> should be blinking continuously unless the nurse
+enters the patient room and <strong>resets</strong> it.</p></li>
+<li><p>The 2nd room number should be visible on the <strong>seven segments Display1</strong> and the reception
+<strong>red LED</strong> keeps glowing until the second nurse comes</p></li>
+<li><p>If the 2nd nurse pushes the <strong>button</strong> in the reception, the orders should be clear onto
+the <strong>Seven Segment Display1</strong>, and the counter should count and shows 2 on the
+<strong>seven segments Display2</strong> but the patient room <strong>green LED</strong> should be blinking continuously
+unless the nurse enters the patient room and <strong>resets</strong> it.</p></li>
+<li><p>The <strong>Active Buzzer</strong> will stop only when the nurse pushes <strong>reset button</strong>.</p></li>
+</ul>
+<p>After understanding the functionality of the one-way communication of
+Call Nurse system, now what are the inputs and the outputs on the FPGA
+Boolean board and how to connect the Active Buzzer with board?</p>
+</section>
+</section>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h2>
+<p>The following image illustrates the inputs, output and the connection of
+the Active Buzzer on the Boolean Board</p>
+<p><img alt="Boolean Board " src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Specification%20Boolean%20Board2.png" /></p>
+<p align="center"> Fig.2.2 Boolean board inputs and outputs that are used in the project </p>  
+<p>The Call Nurse system consists of 2 major hardware components which are:</p>
+<ul class="simple">
+<li><p>FPGA board: Xilinx Spartan-7 XC7S50-CSGA324, and it was provided by
+<a class="reference external" href="https://www.th-deg.de/">Deggendorf Institute of Technology</a> from <a class="reference external" href="https://www.realdigital.org/hardware/boolean">Realdigital website</a>.</p></li>
+<li><p>Active Piezo Buzzer which also was provided by <a class="reference external" href="https://www.th-deg.de/">Deggendorf Institute of Technology</a> from <a class="reference external" href="https://sensorkit.joy-it.net/de/">Sensorkit website</a></p></li>
+</ul>
+<p>In the Image above the inputs and the output representation is</p>
+<section id="input">
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Selectors (Switches) → patient ask for help</p></li>
+<li><p>Push button  → to reset the seven-segment display one and turn off the buzzer</p></li>
+<li><p>Clock  → Main clock of the Boolean board(100MHz)</p></li>
+</ul>
+</section>
+<section id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Seven segment disply1 → Bed Number on Seven Segment Display one</p></li>
+<li><p>Seven segment disply2 → Number of orders on Seven Segment Display two</p></li>
+<li><p>RGB0 →  only red LED is used to alarm the reception</p></li>
+<li><p>Led (0-15) →Green LED for patient room</p></li>
+<li><p>PMODC pins → Active Buzzer to alarm the reception</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1.Literature%20research.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1. Literature research</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3.Implementation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3. Implementation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Amer Alshawabkeh<br/>
+  
+      &copy; Copyright Creative Commons Attribution 4.0 International License.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

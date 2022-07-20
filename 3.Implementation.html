@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Implementation &#8212; Call Nurse System  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <link rel="shortcut icon" href="_static/apple_notes_icon_public_domain_via_wikimedia_commons.svg"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Improvement" href="4.Improvement.html" />
+    <link rel="prev" title="2. Specifications" href="2.Specifications.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/apple_notes_icon_public_domain_via_wikimedia_commons.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Call Nurse System  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Overview.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Literature%20research.html">
+   1. Literature research
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Specifications.html">
+   2. Specifications
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Implementation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Improvement.html">
+   4. Improvement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Conclusion.html">
+   5. Conclusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Source%20code.html">
+   6.Source Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch4-results.html">
+   Results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown_examples.html">
+   Markdown examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spellcheck.html">
+   Spellcheck
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="editing_video.html">
+   Editing and embedding a video
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/3.Implementation.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#block-design">
+   Block design
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debouncer">
+   Debouncer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#led-controller-led-ctrl">
+   LED Controller (LED_CTRL)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-number-generator">
+   Display Number Generator:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seven-segment-display">
+   Seven segment Display
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#buzzer-controller-buzzer-ctrl">
+   Buzzer Controller (Buzzer_Ctrl)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#room-call-detector">
+   Room Call Detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-time-diagram">
+   Simulation (Time diagram)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call-nurse-system-demo">
+   Call Nurse System Demo
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>3. Implementation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#block-design">
+   Block design
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#debouncer">
+   Debouncer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#led-controller-led-ctrl">
+   LED Controller (LED_CTRL)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-number-generator">
+   Display Number Generator:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seven-segment-display">
+   Seven segment Display
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#buzzer-controller-buzzer-ctrl">
+   Buzzer Controller (Buzzer_Ctrl)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#room-call-detector">
+   Room Call Detector
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-time-diagram">
+   Simulation (Time diagram)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#call-nurse-system-demo">
+   Call Nurse System Demo
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="implementation">
+<h1>3. Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">#</a></h1>
+<section id="block-design">
+<h2>Block design<a class="headerlink" href="#block-design" title="Permalink to this headline">#</a></h2>
+<p>Below is the block diagram of the project, a better overview can be found in
+the project repository <a class="reference external" href="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png">here</a></p>
+<p><img alt="Block Design" src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png" /></p>
+<p align="center"> Fig.3.1 Call Nurse System Block Design  </p>  
+</section>
+<section id="debouncer">
+<h2>Debouncer<a class="headerlink" href="#debouncer" title="Permalink to this headline">#</a></h2>
+<p>We have a debouncing effect in the mechanical switches and in the buttons so to solve
+this effect problem debounce module is used. It is also used for the positive edge
+detection. In positive edge detection it will create a pulse for 1 clock cycle.</p>
+<p>The debouncing circuit is used for mechanical switches/ buttons which cause an
+unpredictable bounce in the signal when toggled. There are various ways to implement
+debouncing circuits for buttons on FPGA.</p>
+<p>In this project, two debouncing circuits are implemented in Verilog, the first one is
+used to generate only a single pulse when pressing a push button on FPGA and the second
+one is used to generate only a single pulse when a switch is turned on or off on FPGA Boolean board.</p>
+</section>
+<section id="led-controller-led-ctrl">
+<h2>LED Controller (LED_CTRL)<a class="headerlink" href="#led-controller-led-ctrl" title="Permalink to this headline">#</a></h2>
+<p>In this module we just turn on the corresponding number of LED’s according to the room
+number or bed number. In this system we have 16 beds so number of LED’s is also 16. To
+turn ON the specific led just “and” buzzer with switches. If any Switch is high the led
+(according to the high switch) starts to blink with the frequency of 2Hz because Buzzer
+signal frequency is 2Hz.</p>
+</section>
+<section id="display-number-generator">
+<h2>Display Number Generator:<a class="headerlink" href="#display-number-generator" title="Permalink to this headline">#</a></h2>
+<p>Display Number Generator is used to generate the binary number which indicates the room
+sequence. It also used for generating another number which indicate the total number of
+orders. In this state machine is used to check the all-switch status after specific delay.</p>
+</section>
+<section id="seven-segment-display">
+<h2>Seven segment Display<a class="headerlink" href="#seven-segment-display" title="Permalink to this headline">#</a></h2>
+<p>This module is the seven-segment controller driver. In this controller implement the
+time multiplexing algorithm, in board four 7-segment has only 1 data line. So here for
+displaying different number in each segment controller driver control enable pin.
+Frequency for enable pins is 1,525Hz.</p>
+</section>
+<section id="buzzer-controller-buzzer-ctrl">
+<h2>Buzzer Controller (Buzzer_Ctrl)<a class="headerlink" href="#buzzer-controller-buzzer-ctrl" title="Permalink to this headline">#</a></h2>
+<p>In this module buzzer start with the frequency of 2Hz when any patient calls the nurse.
+It could be stopped when nurse press the button to indicate she is available. For 2Hz
+we just convert the 100MHz clock to 2Hz and then “and” with the variable. The variable
+name is start. It also has another signal for the Blinking of LEDs.</p>
+</section>
+<section id="room-call-detector">
+<h2>Room Call Detector<a class="headerlink" href="#room-call-detector" title="Permalink to this headline">#</a></h2>
+<p>Room_Call_Detector module has a 16-bit vector called alarm, each bit in the vector represents
+a flag for a room switch, when the room switch is raised logic 1 is stored in the index location
+represented by the location of the switch. this vector is then used by the dsply_num_gen to be
+able to identify the number of rooms requesting call.</p>
+</section>
+<section id="simulation-time-diagram">
+<h2>Simulation (Time diagram)<a class="headerlink" href="#simulation-time-diagram" title="Permalink to this headline">#</a></h2>
+<p>The modules were tested separately where each one of them has its own testbench.
+The following waveform screenshot for <a class="reference external" href="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/System%20Test%20bench.png">system testbench</a> modules show the correctness of the
+circuit functionalities.
+As there are many inputs, a screenshot would not be sufficient to depict all of
+them and hence simulating them locally would be ideal in-order to get complete information.</p>
+</section>
+<section id="call-nurse-system-demo">
+<h2>Call Nurse System Demo<a class="headerlink" href="#call-nurse-system-demo" title="Permalink to this headline">#</a></h2>
+<p>The following video illustrate the principal work of the one-way communication
+for Call Nurse system and its implementation.</p>
+<video controls>
+	<source
+		src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Video/call%20Nurse%20system1.mp4"
+		type="video/webm"
+	>
+</video>
+<p>you can watch a demo video of the project <a class="reference external" href="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/blob/main/Video/nurse%20call%20system.mp4">here</a></p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="2.Specifications.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">2. Specifications</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="4.Improvement.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">4. Improvement</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Amer Alshawabkeh<br/>
+  
+      &copy; Copyright Creative Commons Attribution 4.0 International License.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

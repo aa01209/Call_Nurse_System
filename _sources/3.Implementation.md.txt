@@ -1,0 +1,85 @@
+# 3. Implementation
+
+## Block design
+
+Below is the block diagram of the project, a better overview can be found in 
+the project repository [here](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
+
+![Block Design](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/Block_Design.png)
+<p align="center"> Fig.3.1 Call Nurse System Block Design  </p>  
+
+## Debouncer
+We have a debouncing effect in the mechanical switches and in the buttons so to solve 
+this effect problem debounce module is used. It is also used for the positive edge 
+detection. In positive edge detection it will create a pulse for 1 clock cycle. 
+
+
+The debouncing circuit is used for mechanical switches/ buttons which cause an 
+unpredictable bounce in the signal when toggled. There are various ways to implement
+debouncing circuits for buttons on FPGA. 
+
+In this project, two debouncing circuits are implemented in Verilog, the first one is
+used to generate only a single pulse when pressing a push button on FPGA and the second 
+one is used to generate only a single pulse when a switch is turned on or off on FPGA Boolean board.
+
+##	LED Controller (LED_CTRL)
+In this module we just turn on the corresponding number of LED’s according to the room 
+number or bed number. In this system we have 16 beds so number of LED’s is also 16. To 
+turn ON the specific led just “and” buzzer with switches. If any Switch is high the led 
+(according to the high switch) starts to blink with the frequency of 2Hz because Buzzer
+signal frequency is 2Hz. 
+
+## Display Number Generator:
+
+Display Number Generator is used to generate the binary number which indicates the room 
+sequence. It also used for generating another number which indicate the total number of 
+orders. In this state machine is used to check the all-switch status after specific delay.
+
+## Seven segment Display
+
+This module is the seven-segment controller driver. In this controller implement the 
+time multiplexing algorithm, in board four 7-segment has only 1 data line. So here for 
+displaying different number in each segment controller driver control enable pin.
+Frequency for enable pins is 1,525Hz.
+
+## Buzzer Controller (Buzzer_Ctrl)
+
+In this module buzzer start with the frequency of 2Hz when any patient calls the nurse.
+It could be stopped when nurse press the button to indicate she is available. For 2Hz 
+we just convert the 100MHz clock to 2Hz and then “and” with the variable. The variable 
+name is start. It also has another signal for the Blinking of LEDs.
+## Room Call Detector
+
+Room_Call_Detector module has a 16-bit vector called alarm, each bit in the vector represents 
+a flag for a room switch, when the room switch is raised logic 1 is stored in the index location
+represented by the location of the switch. this vector is then used by the dsply_num_gen to be
+able to identify the number of rooms requesting call. 
+
+## Simulation (Time diagram)
+
+The modules were tested separately where each one of them has its own testbench.
+The following waveform screenshot for [system testbench](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Images/System%20Test%20bench.png) modules show the correctness of the
+circuit functionalities. 
+As there are many inputs, a screenshot would not be sufficient to depict all of 
+them and hence simulating them locally would be ideal in-order to get complete information. 
+
+
+## Call Nurse System Demo
+
+The following video illustrate the principal work of the one-way communication
+for Call Nurse system and its implementation.
+
+<video controls>
+	<source
+		src="https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/raw/main/Video/call%20Nurse%20system1.mp4"
+		type="video/webm"
+	>
+</video>
+
+you can watch a demo video of the project [here](https://mygit.th-deg.de/aa01209/intercom-call-nurse-system/-/blob/main/Video/nurse%20call%20system.mp4)
+
+
+
+
+
+

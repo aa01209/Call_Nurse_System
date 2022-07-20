@@ -1,0 +1,10 @@
+# 4. Improvement 
+
+This project can be further developed by employing a wire/wireless calling system for  
+Two-way communication which offers a flexibility of communication between two sides.
+
+Two-way communication systems ensure that greater distances are covered for a more 
+streamlined communication. The easier you can communicate within your facility using 
+two-way call nurse system, the greater your efficiency at work for better service and 
+better conditions for the staff.
+
